@@ -16,9 +16,9 @@ const subscriber = {
 
 class TripleSubscriber extends Subscriber {
   _next(value) {
-    console.log(value);
+    // console.log(value);
     this.destination.next(value * 3);
   }
 }
 
-observable$.subscribe(new TripleSubscriber());
+observable$.subscribe(new TripleSubscriber(subscriber));
